@@ -1,0 +1,168 @@
+:root{
+  --primary-clr:#102542;
+  --secondary-clr:#1f1c2c;
+  --bg-clr:  #ece7e2;
+  --white-clr:#fff;
+  --grey-clr: #bababa;
+  --error-clr:#cd1f15;
+  --black-clr:#000;
+  --hover-clr:#585e6c;
+  --success-clr:#03aa4c;
+}
+form{
+  padding: 30px;
+  position: absolute;
+  top: 120px;
+  left: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  min-height: 350px; /*Changed from height: 350px to ensure space for button */
+  width: 83%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: relative;
+}
+form input[type='number']::-webkit-inner-spin-button{
+  display: none;
+}
+.details{
+  display: flex;
+  width: 100%;
+}
+.input-box{
+  width: 350px;
+  height: 50px;
+  margin-right: 10px;
+  margin-bottom: 30px;
+}
+.input-box input{
+  width: 100%;
+  font-size: 16px;
+  outline: none;
+  padding: 10px;
+  border: 1px solid var(--grey-clr);
+  border-radius: 5px;
+  height: 100%;
+}
+.input-box input:focus{
+  border: 1px solid var(--primary-clr);
+  border-bottom: 3px solid var(--primary-clr);
+}
+.input-box .bi-eye-slash-fill,
+.input-box .bi-eye-fill{
+  position: absolute;
+  transform: translateY(40%) translateX(-150%);
+  font-size: 20px;
+  color: var(--grey-clr);
+  cursor: pointer;
+}
+.input-box p{
+  color: var(--error-clr);
+  animation: shake 1s;
+  display: none;
+  font-size: 0.9rem;
+}
+.input-box p.error{
+  animation: shake 1s;
+}
+.submit{
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 240px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+.submit input{
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  height: 100%;
+  position: relative;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid var(--primary-clr);
+  background: var(--white-clr);
+  color: var(--primary-clr);
+  transition: .3s ease-in-out;
+}
+.submit input:hover{
+  background: var(--primary-clr);
+  color: var(--white-clr);
+  border: none;
+}
+.select-group{
+  display: flex;
+}
+.select-group select{
+  display: flex;
+  width: 300px;
+  border: 1px solid var(--grey-clr);
+  margin-right: 10px;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+  height: 50px;
+  font-size: 16px;
+}
+.select-group select:focus{
+  border: 1px solid var(--primary-clr);
+  border-bottom: 3px solid var(--primary-clr);
+}
+
+@media screen and (max-width: 1024px) {
+  form {
+    left: 180px;
+    width: calc(100% - 200px);
+  }
+  .details {
+    flex-wrap: wrap;
+  }
+  .submit {
+    width: 220px;
+    bottom: 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  form {
+    left: 0;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    min-height: 500px;
+    padding-bottom: 80px;
+  }
+  .input-box {
+    width: 100%;
+    margin-right: 0;
+  }
+  .select-group {
+    flex-direction: column;
+  }
+  .select-group select {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .submit {
+    width: 200px;
+    bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  form {
+    padding: 15px;
+    min-height: 550px;
+    padding-bottom: 70px;
+  }
+  .submit {
+    width: 90%;
+    bottom: 15px;
+  }
+}
