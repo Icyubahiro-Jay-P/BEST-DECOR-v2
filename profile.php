@@ -97,7 +97,6 @@ $user = mysqli_fetch_assoc($result);
       </a>
     </div>
   </main>
-<script src="../js/profile.js"></script>
-<script src="../js/delete_account.js"></script>
+<script src="js/delete_account.js"></script>
 </body>
 </html>

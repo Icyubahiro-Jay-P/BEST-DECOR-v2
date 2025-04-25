@@ -1,5 +1,5 @@
 <?php
-include_once "../php/connect.php";
+include_once "php/connect.php";
 session_start();
 if(!isset($_SESSION['user_id'])){
   echo "<script>
@@ -91,7 +91,7 @@ if(!isset($_SESSION['user_id'])){
     </thead>
     <tbody>
       <?php
-      include("../php/connect.php");
+      include("php/connect.php");
       $count = 0;
         $sql = "SELECT * FROM clients WHERE taken = 'Yes' AND returned = 'Yes'";
         $query = mysqli_query($conn, $sql);

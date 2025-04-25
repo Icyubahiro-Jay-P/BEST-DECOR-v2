@@ -1,5 +1,5 @@
 <?php
-include("../php/connect.php");
+include("php/connect.php");
 session_start();
 if(!isset($_SESSION['user_id'])){
   echo "<script>
@@ -15,7 +15,6 @@ if(!isset($_SESSION['user_id'])){
   <title>Best Decor: Add Client</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/add_client.css">
-  <link rel="stylesheet" href="css/dark-theme.css">
   <link rel="stylesheet" href="icons/bootstrap-icons.css">
 </head>
 <body data-theme="light">
@@ -118,6 +117,5 @@ if(!isset($_SESSION['user_id'])){
       <input type="submit" value="Register">
     </div>
   </form>
-  <script src="../js/theme.js"></script>
 </body>
 </html>
