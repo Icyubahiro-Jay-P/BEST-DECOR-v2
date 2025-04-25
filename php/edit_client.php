@@ -4,12 +4,12 @@ session_start();
 $client_id = $_POST['client_id'];
 if(!isset($_SESSION['user_id'])){
   echo "<script>
-          window.location.assign('../pages/index.php');
+          window.location.assign('../dashboard');
         </script>";
 }
 if(!isset($client_id)){
   echo "<script>
-          window.location.assign('../pages/index.php');
+          window.location.assign('../dashboard');
         </script>";
 }elseif($_SERVER['REQUEST_METHOD'] == 'POST'){
   $full_name = mysqli_real_escape_string($conn, $_POST['full_name']);
@@ -29,18 +29,18 @@ if(!isset($client_id)){
   if($query){
     echo "<script>
             alert('Client is editted successfully');
-            window.location.assign('../pages/index.php');
+            window.location.assign('../dashboard');
           </script>";
   }else{
     echo "<script>
             alert('Failed to edit the client');
-            // window.location.assign('../pages/index.php');
+            // window.location.assign('../dashboard');
           </script>";
         }
       }else{
   echo "<script>
           alert('Failed to edit the client');
-          // window.location.assign('../pages/index.php');
+          // window.location.assign('../dashboard');
         </script>";
 }
 ?>

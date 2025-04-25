@@ -1,7 +1,7 @@
 <?php
 include_once "./connect.php";
 session_start();
-if($_SERVER['REQUEST_METHOD']){
+if($_SERVER['REQUEST_METHOD'] == "POST"){
   $email = mysqli_real_escape_string($conn, $_POST['email']);
   $password = mysqli_real_escape_string($conn, $_POST['password']);
   $hash = md5($password);
@@ -15,7 +15,7 @@ if(!empty($email) && !empty($password)){
           $_SESSION['user_id'] = $row['id'];
           $_SESSION['email'] = $row['email'];
           $_SESSION['role'] = $row['role'];
-          $_SESSION['created_at'] = $row['created_at'];
+          $_SESSION['joined_on'] = $row['joined_on'];
           $_SESSION['full_name'] = $row['full_name'];
           $_SESSION['password'] = $row['password'];
           echo "success";

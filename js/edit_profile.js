@@ -2,10 +2,8 @@ const form = document.querySelector("form");
 const inputBoxes = document.querySelectorAll(".input-box input");
 const errorTxt = document.querySelectorAll(".input-box p");
 const submitBtn = document.querySelector("input[type='submit']");
-const passwordShowIcon = document.querySelector(".input-box .bi-eye-slash-fill");
-const passwordInput = document.querySelector(".input-box input[type='password']");
 
-document.getElementById('login-form').addEventListener('submit', function(event, error) {
+document.getElementById('edit-profile-form').addEventListener('submit', function(event, error) {
   // Perform form validation
   // ...
 
@@ -20,11 +18,6 @@ document.getElementById('login-form').addEventListener('submit', function(event,
       }, 800); // Adjust the duration as needed
   }
 });
-
-passwordShowIcon.onclick = () => {
-  passwordInput.type = passwordInput.type === "password" ? "text" : "password";
-  passwordShowIcon.className = `bi bi-eye${passwordInput.type === "password" ? "-slash" : ""}-fill`;
-};
 form.onsubmit = (e) => {
   e.preventDefault();
   if (inputBoxes[0].value === "") {
@@ -36,7 +29,7 @@ form.onsubmit = (e) => {
 
   if (inputBoxes[1].value === "") {
     errorTxt[1].style.display = "flex";
-    errorTxt[1].innerHTML = '<i class="bi bi-info-circle-fill"></i> Password is missing.';
+    errorTxt[1].innerHTML = '<i class="bi bi-info-circle-fill"></i> Full names are missing.';
   } else {
     errorTxt[1].style.display = "none";
   }
@@ -50,25 +43,20 @@ form.onsubmit = (e) => {
     }
   };
 }
-
 submitBtn.onclick = () => {
   const xhr = new XMLHttpRequest();
-  xhr.open("POST", "./php/login", true);
+  xhr.open("POST", "./php/edit_profile", true);
   xhr.onload = () => {
     if (xhr.readyState === XMLHttpRequest.DONE) {
       if (xhr.status === 200) {
         const data = xhr.response;
-        // console.log(data);
-        if (data == "success") {
-          location.href = "./home";
-        }
-        if (data === "Email is not found") {
-          errorTxt[0].style.display = "flex";
-          errorTxt[0].innerHTML = '<i class="bi bi-info-circle-fill"></i> Email is not found.';
-        }
-        if (data === "Wrong password") {
-          errorTxt[1].style.display = "flex";
-          errorTxt[1].innerHTML = '<i class="bi bi-info-circle-fill"></i> Wrong password.';
+        console.log(data);
+        if (data === "success") {
+          alert("You have successfully editted your profile");
+          window.location.assign("../profile");
+        } else {
+          alert("Failed to edit your profile");
+          window.location.assign("../profile");
         }
       }
     }

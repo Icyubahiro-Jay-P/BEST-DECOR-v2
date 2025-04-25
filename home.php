@@ -1,8 +1,8 @@
 <?php
 session_start();
-include("../php/connect.php");
+include("php/connect.php");
 if(!isset($_SESSION['full_name'])){
-  echo "<script>window.location.assign('../pages/login.php');</script>";
+  echo "<script>window.location.assign('./login');</script>";
 }
 ?>
 <!DOCTYPE html>
@@ -10,9 +10,9 @@ if(!isset($_SESSION['full_name'])){
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/home.css">
-  <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="icons/bootstrap-icons.css">
   <title>Best Decor: Home</title>
 </head>
 <body data-theme="light">
@@ -21,8 +21,8 @@ if(!isset($_SESSION['full_name'])){
     <h2>Home</h2>
     <div class="parts">
       <div class="profile">
-        <a href="profile.php">
-          <img src="../profile.png" alt="Profile">
+        <a href="profile">
+          <img src="profile.png" alt="Profile">
         </a>
       </div>
     </div>
@@ -30,37 +30,37 @@ if(!isset($_SESSION['full_name'])){
   <nav>
     <ul>
       <li class="active">
-        <a href="home.php">
+        <a href="home">
           <i class="bi bi-house-fill"></i>Home
         </a>
       </li>
       <li>
-        <a href="index.php">
+        <a href="dashboard">
           <i class="bi bi-journal-album"></i>
           Dashboard</a>
       </li>
       <li>
-        <a href="./add_client.php">
+        <a href="./add_client">
           <i class="bi bi-person-plus-fill"></i>
           Add&nbsp;client</a>
       </li>
       <li>
-        <a href="taken.php">
+        <a href="taken">
           <i class="bi bi-box-arrow-right"></i>
           Taken</a>
       </li>
       <li>
-        <a href="returned.php">
+        <a href="returned">
           <i class="bi bi bi-box-arrow-in-left"></i>
           Returned</a>
       </li>
       <li>
-        <a href="profile.php">
+        <a href="profile">
           <i class="bi bi-person-circle"></i>
           Profile</a>
       </li>
       <li>
-        <a href="../php/logout.php">
+        <a href="php/logout">
           <i class="bi bi-box-arrow-left"></i>
           Log&nbsp;out</a>
       </li>
@@ -113,19 +113,19 @@ if(!isset($_SESSION['full_name'])){
     <section class="quick-actions">
       <h2>Quick Actions</h2>
       <div class="actions-grid">
-        <a href="add_client.php" class="action-card">
+        <a href="add_client" class="action-card">
           <i class="bi bi-person-plus-fill"></i>
           <span>Add Client</span>
         </a>
-        <a href="taken.php" class="action-card">
+        <a href="taken" class="action-card">
           <i class="bi bi-box-arrow-right"></i>
           <span>View Taken</span>
         </a>
-        <a href="returned.php" class="action-card">
+        <a href="returned" class="action-card">
           <i class="bi bi-box-arrow-in-left"></i>
           <span>View Returned</span>
         </a>
-        <a href="index.php" class="action-card">
+        <a href="dashboard" class="action-card">
           <i class="bi bi-grid-fill"></i>
           <span>Dashboard</span>
         </a>
@@ -157,6 +157,5 @@ if(!isset($_SESSION['full_name'])){
     </section>
   </main>
 
-  <script src="../js/theme.js"></script>
 </body>
 </html>

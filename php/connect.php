@@ -9,6 +9,6 @@ try{
                          $db_pass,
                          $db_name);
 }catch(mysqli_sql_exception){
-  echo "Failed to connect to the database";
+  echo "Failed to connect.php to the database";
 }
 ?>

@@ -1,67 +1,25 @@
-@font-face {
-  font-family: "Poppins";
-  src: url("../fonts/Poppins-Regular.ttf");
-}
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-:root{
-  --primary-clr:#102542;
-  --secondary-clr:#1f1c2c;
-  --bg-clr:  #ece7e2;
-  --white-clr:#fff;
-  --grey-clr: #bababa;
-  --error-clr:#cd1f15;
-  --black-clr:#000;
-  --hover-clr:#585e6c;
-  --success-clr:#03aa4c;
-}
-body{
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background: var(--primary-clr);
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  padding: 20px 0;
-}
 form{
-  width: 550px;
-  height: 370px;
+  width: 450px;
+  height: max-content;
   display: flex;
-  margin-top: auto;
   flex-direction: column;
   align-items: center;
-  padding: 30px;
   border-radius: 5px;
   background: var(--white-clr);
-}
-form.signup{
-  width: 700px;
-  height:max-content;
-}
-form h1{
-  font-size: 1.7rem;
-  margin-bottom: -10px;
-  color: var(--black-clr);
-}
-form h2{
-  color: var(--black-clr);
-  margin-bottom: 10px;
-}
-.details{
-  display: flex;
-  width: 100%;
 }
 .input-box{
   width: 80%;
   height: 50px;
   margin-right: 10px;
   margin-bottom: 30px;
+}
+.input-box .bi-eye-slash-fill,
+.input-box .bi-eye-fill{
+  position: absolute;
+  transform: translateY(35%) translateX(-150%);
+  font-size: 20px;
+  color: var(--grey-clr);
+  cursor: pointer;
 }
 .input-box input{
   width: 100%;
@@ -76,14 +34,6 @@ form h2{
   border: 1px solid var(--primary-clr);
   border-bottom: 3px solid var(--primary-clr);
 }
-.input-box .bi-eye-slash-fill,
-.input-box .bi-eye-fill{
-  position: absolute;
-  transform: translateY(35%) translateX(-150%);
-  font-size: 20px;
-  color: var(--grey-clr);
-  cursor: pointer;
-}
 .input-box p{
   color: var(--error-clr);
   animation: shake 1s;
@@ -94,7 +44,7 @@ form h2{
   animation: shake 1s;
 }
 .submit{
-  width: 250px;
+  width: 240px;
   height: 45px;
 }
 .submit input{
@@ -117,16 +67,6 @@ form h2{
 .links{
   margin-top: 10px;
   font-size: 0.95rem;
-}
-.links p{
-  color: var(--black-clr);
-}
-.links a{
-  color: var(--primary-clr);
-  text-decoration: none;
-}
-.links a:hover{
-  text-decoration: underline;
 }
 @keyframes shake {
   0% { transform: translate(1px, 0px) ; }
@@ -276,29 +216,4 @@ form h2{
   footer{
     width: 100%;
   }
-}
-
-footer {
-  margin-top: auto;
-  text-align: center;
-  color: var(--black-clr);
-  background: var(--bg-clr);
-  padding: 20px 0;
-  width: 100%;
-  position: relative;
-  bottom: -20px;
-}
-
-footer p {
-  margin-bottom: 5px;
-  font-size: 0.9rem;
-}
-
-footer span {
-  font-size: 0.85rem;
-  opacity: 0.9;
-}
-
-footer b {
-  color: var(--primary-clr);
 }

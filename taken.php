@@ -3,7 +3,7 @@ include_once "../php/connect.php";
 session_start();
 if(!isset($_SESSION['user_id'])){
   echo "<script>
-          location.assign('./login.php');
+          location.assign('./login');
         </script>";
 }
 ?>
@@ -12,8 +12,8 @@ if(!isset($_SESSION['user_id'])){
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../icons/bootstrap-icons.css">
-  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/main.css">
   <title>Best Decor: Dashboard</title>
 </head>
 <body>
@@ -26,8 +26,8 @@ if(!isset($_SESSION['user_id'])){
       <button><i class="bi bi-search"></i></button>
     </div>
       <div class="profile">
-        <a href="profile.php">
-          <img src="../profile.png" alt="">
+        <a href="profile">
+          <img src="profile.png" alt="">
         </a>
       </div>
     </div>
@@ -35,37 +35,37 @@ if(!isset($_SESSION['user_id'])){
   <nav>
     <ul>
       <li>
-        <a href="home.php">
+        <a href="home">
           <i class="bi bi-house-fill"></i>Home
         </a>
       </li>
       <li>
-        <a href="index.php">
+        <a href="dashboard">
           <i class="bi bi-journal-album"></i>
           Dashboard</a>
       </li>
       <li>
-        <a href="./add_client.php">
+        <a href="./add_client">
           <i class="bi bi-person-plus-fill"></i>
           Add&nbsp;client</a>
       </li>
       <li class="active">
-        <a href="taken.php">
+        <a href="taken">
           <i class="bi bi-box-arrow-right"></i>
           Taken</a>
       </li>
       <li>
-        <a href="returned.php">
+        <a href="returned">
           <i class="bi bi bi-box-arrow-in-left"></i>
           Returned</a>
       </li>
       <li>
-        <a href="profile.php">
+        <a href="profile">
           <i class="bi bi-person-circle"></i>
           Profile</a>
       </li>
       <li>
-        <a href="../php/logout.php">
+        <a href="php/logout">
           <i class="bi bi-box-arrow-left"></i>
           Log&nbsp;out</a>
       </li>
@@ -83,11 +83,11 @@ if(!isset($_SESSION['user_id'])){
       <th>Balance</th>
       <th>Taken</th>
       <th>Date of Take</th>
-      <th>Returned</th>
-      <th>Date of Return</th>
-      <th>Done by</th>
-      <th>Edit</th>
-      <th>Delete</th>
+      <!-- <th>Returned</th> -->
+      <!-- <th>Date of Return</th> -->
+      <!-- <th>Done by</th> -->
+      <!-- <th>Edit</th> -->
+      <!-- <th>Delete</th> -->
     </thead>
     <tbody>
       <?php
@@ -107,11 +107,11 @@ if(!isset($_SESSION['user_id'])){
               <td><?php echo $row['balance'] . " Frw"?></td>
               <td><?php echo $row['taken']?></td>
               <td><?php echo $row["date_taken"] == "0000-00-00 00:00:00" ? "*****" : $row['date_taken'] ?></td>
-              <td><?php echo $row['returned']?></td>
-              <td><?php echo $row["date_returned"] == "0000-00-00 00:00:00" ? "*****" : $row['date_returned']?></td>
-              <td><?php echo $_SESSION['full_name']; ?></td>
-              <td><a class="success" href="./update.php?client_id=<?php echo $row['id']?>"><i class="bi bi-pencil success"></i>Edit</a></td>
-              <td><a class="failed" href="../php/delete.php?client_id=<?php echo $row['id']?>"><i class="bi bi-trash-fill failed"></i>Delete</a></td>
+              <!-- <td><?php echo $row['returned']?></td> -->
+              <!-- <td><?php echo $row["date_returned"] == "0000-00-00 00:00:00" ? "*****" : $row['date_returned']?></td> -->
+              <!-- <td><?php echo $_SESSION['full_name']; ?></td> -->
+              <!-- <td><a class="success" href="./update?client_id=<?php echo $row['id']?>"><i class="bi bi-pencil success"></i>Edit</a></td> -->
+              <!-- <td><a class="failed" href="../php/delete?client_id=<?php echo $row['id']?>"><i class="bi bi-trash-fill failed"></i>Delete</a></td> -->
             </tr>
             <?php
 

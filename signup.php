@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Best Decor: Sign up</title>
-  <link rel="stylesheet" href="../css/forms.css">
-  <link rel="stylesheet" href="../icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="icons/bootstrap-icons.css">
 </head>
 <body>
   <form action="#" method="post" class="signup" id="signup-form">
@@ -38,13 +38,13 @@
         <input type="submit" value="Sign up">
       </div>
     <div class="links">
-      <p>Already have an account? <a href="login.php">Log in</a></p>
+      <p>Already have an account? <a href="login">Log in</a></p>
     </div>
   </form>
   <footer>
     <p>&copy;Copyright 2025</p>
     <span>Created and designed by <b>Jay P</b></span>
   </footer>
-  <script src="../js/signup.js"></script>
+  <script src="js/signup.js"></script>
 </body>
 </html>

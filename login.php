@@ -4,10 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Best Decor: Log in</title>
-  <link rel="stylesheet" href="../css/forms.css">
-  <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../icons/bootstrap-icons.css">
-  <link rel="stylesheet" href="../css/dark-theme.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="icons/bootstrap-icons.css">
 </head>
 <body data-theme="light">
   <form action="#" method="post" id="login-form">
@@ -26,14 +24,13 @@
       <input type="submit" value="Log in">
     </div>
     <div class="links">
-      <p>No account? <a href="signup.php">Sign up</a></p>
+      <p>No account? <a href="signup">Sign up</a></p>
     </div>
   </form>
   <footer>
     <p>&copy;Copyright 2025</p>
     <span>Created and designed by <b>Jay P</b></span>
   </footer>
-  <script src="../js/login.js"></script>
-  <script src="../js/theme.js"></script>
+  <script src="js/login.js"></script>
 </body>
 </html>

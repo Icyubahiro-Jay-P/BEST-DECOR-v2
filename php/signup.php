@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
     $confirm_password = mysqli_real_escape_string($conn, $_POST['confirm_password']);
-    $random_id = rand();
+    $random_id = rand(10000, 10000000);
     $hash = md5($password);
 
     // Check if email already exists in the database
@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } elseif (!empty($full_name) && !empty($email) && !empty($password) && !empty($confirm_password)) {
       if($password === $confirm_password){
         // Insert new user into the database
-        $sql = "INSERT INTO users (id, full_name, email, password, role, joined_at)
+        $sql = "INSERT INTO users (id, full_name, email, password, role, joined_on)
                 VALUES ('$random_id', '$full_name', '$email', '$hash', 'admin', NOW())";
         $query = mysqli_query($conn, $sql);
 
@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $_SESSION['user_id'] = $row['id'];
                 $_SESSION['email'] = $row['email'];
                 $_SESSION['role'] = $row['role'];
-                $_SESSION['created_at'] = $row['created_at'];
+                $_SESSION['joined_on'] = $row['joined_on'];
                 $_SESSION['full_name']  = $row['full_name'];
                 $_SESSION['password'] = $row['password'];
                 echo "success";

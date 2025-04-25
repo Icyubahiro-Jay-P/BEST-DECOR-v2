@@ -53,14 +53,14 @@ CREATE TABLE `users` (
   `email` varchar(250) NOT NULL,
   `password` varchar(250) NOT NULL,
   `role` varchar(250) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `joined_on` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `full_name`, `email`, `password`, `role`, `created_at`) VALUES
+INSERT INTO `users` (`id`, `full_name`, `email`, `password`, `role`, `joined_on`) VALUES
 (1359195485, 'Icyubahiro Jay P', 'admin@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', 'admin', '2025-03-16 17:27:49');
 
 --

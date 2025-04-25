@@ -11,6 +11,7 @@
 
 :root {
   --primary-clr: #102542;
+  /* --primary-clr: #4070f4; */
   --secondary-clr: #1f1c2c;
   --bg-clr: #ece7e2;
   --white-clr: #fff;
@@ -21,7 +22,7 @@
   --success-clr: #03aa4c;
   --primary-color: #2c3e50;
   --secondary-color: #3498db;
-  --background-color: #f5f6fa;
+  --background-color: #efeffb;
   --text-color: #2c3e50;
   --card-bg: #ffffff;
 }
@@ -172,7 +173,7 @@ nav li.active .bi {
   color: var(--white-clr);
   padding: 30px;
   border-radius: 10px;
-  margin-top: 50px;
+  margin-top: 10px;
   margin-bottom: 30px;
   width: 100%;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
@@ -297,6 +298,7 @@ nav li.active .bi {
   display: flex;
   align-items: center;
   gap: 15px;
+  margin-bottom: 10px;
   padding: 10px 0;
   border-bottom: 1px solid var(--bg-clr);
   display: flex;
@@ -313,7 +315,7 @@ nav li.active .bi {
 }
 
 .activity-details small {
-  color: var(--grey-clr);
+  color: var(--text-color);
 }
 
 @media screen and (max-width: 1024px) {
@@ -356,8 +358,8 @@ nav li.active .bi {
   }
 
   .home-container {
-    margin-left: 0;
-    padding-top: 100px;
+    margin-left: 50px;
+    /* padding-top: 100px; */
   }
 
   .stats-section {

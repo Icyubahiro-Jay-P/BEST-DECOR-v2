@@ -3,7 +3,7 @@ include("connect.php");
 session_start();
 if(!isset($_SESSION['user_id'])){
   echo "<script>
-          window.location.assign('../pages/login.php');
+          window.location.assign('../login');
         </script>";
 }
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -25,12 +25,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
   if($query){
     echo "<script>
             alert('Client is successfully registered');
-            window.location.assign('../pages/index.php');
+            window.location.assign('../dashboard');
           </script>";
   }else{
     echo "<script>
             alert('Failed to register the client');
-            window.location.assign('../pages/index.php');
+            window.location.assign('../dashboard');
           </script>";
   }
 }
