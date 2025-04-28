@@ -14,7 +14,7 @@ if(!isset($_SESSION['user_id'])){
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="icons/bootstrap-icons.css">
   <link rel="stylesheet" href="css/main.css">
-  <title>Best Decor: Dashboard</title>
+  <title>Best Decor: Returned</title>
 </head>
 <body>
   <header>

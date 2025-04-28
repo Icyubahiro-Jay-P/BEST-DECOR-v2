@@ -53,10 +53,10 @@ submitBtn.onclick = () => {
         console.log(data);
         if (data === "success") {
           alert("You have successfully editted your profile");
-          window.location.assign("../profile");
+          window.location.assign("./profile");
         } else {
           alert("Failed to edit your profile");
-          window.location.assign("../profile");
+          window.location.assign("./profile");
         }
       }
     }

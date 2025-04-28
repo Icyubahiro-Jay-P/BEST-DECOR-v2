@@ -13,7 +13,7 @@ if(!isset($user_id)){
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Best Decor: Edit profile</title>
   <link rel="stylesheet" href="css/profile.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/edit_profile.css">
@@ -82,6 +82,6 @@ if(!isset($user_id)){
     </div>
   </form>
 </main>
-<script src="../js/edit_profile.js"></script>
+<script src="js/edit_profile.js"></script>
 </body>
 </html>
