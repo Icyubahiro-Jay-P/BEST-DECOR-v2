@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Best Decor: Log in</title>
+  <?php include("favicon.php");?>
   <link rel="stylesheet" href="css/forms.css">
   <link rel="stylesheet" href="icons/bootstrap-icons.css">
 </head>
@@ -23,9 +24,9 @@
     <div class="submit">
       <input type="submit" value="Log in">
     </div>
-    <div class="links">
-      <p>No account? <a href="signup">Sign up</a></p>
-    </div>
+    <!-- <div class="links">
+      <p>Forgot password? <a href="signup">Reset it</a></p>
+    </div> -->
   </form>
   <footer>
     <p>&copy;Copyright 2025</p>

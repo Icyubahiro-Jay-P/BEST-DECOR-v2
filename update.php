@@ -1,5 +1,5 @@
 <?php
-include("../php/connect.php");
+include("./php/connect.php");
 session_start();
 if(!isset($_SESSION['full_name'])){
   echo "<script>
@@ -70,7 +70,7 @@ if(!isset($client_id)){
       </li>
       <li>
         <a href="profile">
-          <img src="<?php echo (!isset($_SESSION['profile_picture']) ? "../profile.png" : $_SESSION['profile_picture'])?>" alt="profile picture" style="height:30px; width:30px; border-radius:50%;margin-right:15px">
+          <img src="profile.png" alt="profile picture" style="height:30px; width:30px; border-radius:50%;margin-right:15px">
           Profile</a>
       </li>
       <li>
@@ -80,7 +80,7 @@ if(!isset($client_id)){
       </li>
     </ul>
   </nav>
-  <form action="../php/edit_client.php" method="POST">
+  <form action="php/edit_client.php" method="POST">
     <input type="hidden" value="<?php echo $client_id?>" name="client_id">
     <div class="details">
       <div class="input-box">

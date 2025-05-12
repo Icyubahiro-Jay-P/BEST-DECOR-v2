@@ -1,15 +1,20 @@
 <?php
 include("connect.php");
 session_start();
-$sql = "DELETE FROM users WHERE id = '$_SESSION[user_id]'";
+$user_id = mysqli_real_escape_string($conn, $_POST['user_id']);
+$sql = "DELETE FROM `users` WHERE id = '$user_id'";
 $query = mysqli_query($conn, $sql);
 if($query){
-  session_unset();
-  session_destroy();
-  echo "Account deleted successfully";  
-}
-else{
-  echo "Error: ".mysqli_error($conn);
-  echo "Account not deleted";
+  $_SESSION['toast'] = [
+    'type' => 'success',
+    'message' => 'Account deleted successfully'
+  ];
+  echo "success";
+}else{
+  $_SESSION['toast'] = [
+    'type' => 'error',
+    'message' => 'Failed to delete account'
+  ];
+  echo "success";
 }
 ?>

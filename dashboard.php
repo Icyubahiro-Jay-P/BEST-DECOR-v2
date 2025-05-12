@@ -14,17 +14,23 @@ if(!isset($_SESSION['user_id'])){
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="icons/bootstrap-icons.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/toast.css">
   <title>Best Decor: Dashboard</title>
 </head>
-<body data-theme="light">
+<body>
   <header>
     <h3>Best Decor</h3>
     <h2>Dashboard</h1>
+    <?php
+      if(isset($_SESSION['toast'])){
+       include('components/toast.php');
+      }
+    ?>
     <div class="parts">
-      <div class="search-box">
+      <!-- <div class="search-box">
         <input type="text" placeholder="Search" name="search" id="search">
         <button><i class="bi bi-search"></i></button>
-      </div>
+      </div> -->
       <div class="profile">
         <a href="profile">
           <img src="profile.png" alt="">
@@ -110,8 +116,8 @@ if(!isset($_SESSION['user_id'])){
               <td><?php echo $row['returned']?></td>
               <td><?php echo $row["date_returned"] == "0000-00-00 00:00:00" ? "*****" : $row['date_returned']?></td>
               <td><?php echo $_SESSION['full_name']; ?></td>
-              <td><a class="success" href="./update?client_id=<?php echo $row['id']?>"><i class="bi bi-pencil success"></i>Edit</a></td>
-              <td><a class="failed" href="../php/delete?client_id=<?php echo $row['id']?>"><i class="bi bi-trash-fill failed"></i>Delete</a></td>
+              <td><a style="background:var(--success-clr);padding:5px 10px;border-radius:5px; color:white;text-decoration:none;" href="update?client_id=<?php echo $row['id']?>"><i class="bi bi-pencil-fill"></i></a></td>
+              <td><a style="background:var(--error-clr);padding:5px 10px;border-radius:5px; color:white;text-decoration:none;" href="./php/delete_client?client_id=<?php echo $row['id']?>"><i class="bi bi-trash-fill"></i></a></td>
             </tr>
             <?php
 

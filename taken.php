@@ -21,10 +21,10 @@ if(!isset($_SESSION['user_id'])){
     <h3>Best Decor</h3>
     <h2>Taken</h1>
     <div class="parts">
-      <div class="search-box">
+      <!-- <div class="search-box">
       <input type="text" placeholder="Search" name="search" id="search">
       <button><i class="bi bi-search"></i></button>
-    </div>
+    </div> -->
       <div class="profile">
         <a href="profile">
           <img src="profile.png" alt="">

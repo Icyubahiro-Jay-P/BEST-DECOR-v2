@@ -13,6 +13,7 @@ if(!isset($_SESSION['user_id'])){
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Best Decor: Add Client</title>
+  <?php include("favicon.php");?>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/add_client.css">
   <link rel="stylesheet" href="icons/bootstrap-icons.css">
@@ -62,13 +63,13 @@ if(!isset($_SESSION['user_id'])){
           Profile</a>
       </li>
       <li>
-        <a href="../php/logout">
+        <a href="php/logout">
           <i class="bi bi-box-arrow-left"></i>
           Log&nbsp;out</a>
       </li>
     </ul>
   </nav>
-  <form action="../php/add_client" method="POST" autocomplete="off">
+  <form action="php/add_client" method="POST" autocomplete="off">
     <div class="details">
       <div class="input-box">
         <input type="text" placeholder="Full name" name="full_name">
@@ -89,10 +90,8 @@ if(!isset($_SESSION['user_id'])){
       </div>
       <div class="input-box">
         <label style="color:#666;margin-top:-20px;position:absolute;">Date of Take</label>
-        <input type="datetime-local" name="date_taken" id="">
+        <input type="datetime-local" name="date_taken">
       </div>
-    </div>
-    <div class="details">
     </div>
     <div class="details">
       <div class="input-box">

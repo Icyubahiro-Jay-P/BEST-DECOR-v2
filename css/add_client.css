@@ -37,7 +37,8 @@ form input[type='number']::-webkit-inner-spin-button{
   margin-right: 10px;
   margin-bottom: 30px;
 }
-.input-box input{
+.input-box input,
+.input-box input[type='datetime-local']{
   width: 100%;
   font-size: 16px;
   outline: none;
@@ -101,7 +102,7 @@ form input[type='number']::-webkit-inner-spin-button{
 }
 .select-group select{
   display: flex;
-  width: 300px;
+  width: 350px;
   border: 1px solid var(--grey-clr);
   margin-right: 10px;
   outline: none;
@@ -117,8 +118,11 @@ form input[type='number']::-webkit-inner-spin-button{
 
 @media screen and (max-width: 1024px) {
   form {
-    left: 180px;
-    width: calc(100% - 200px);
+    left: 100px;
+    width: calc(100% - 150px);
+  }
+  .input-box{
+    width: 100%;
   }
   .details {
     flex-wrap: wrap;
@@ -131,8 +135,8 @@ form input[type='number']::-webkit-inner-spin-button{
 
 @media screen and (max-width: 768px) {
   form {
-    left: 0;
-    width: 100%;
+    left: 70px;
+    width: calc(100% - 100px);
     height: auto;
     margin-bottom: 20px;
     min-height: 500px;
@@ -160,6 +164,14 @@ form input[type='number']::-webkit-inner-spin-button{
     padding: 15px;
     min-height: 550px;
     padding-bottom: 70px;
+  }
+  .select-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  .select-group select {
+    width: 100%;
+    margin-bottom: 25px;
   }
   .submit {
     width: 90%;

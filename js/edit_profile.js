@@ -1,7 +1,7 @@
-const form = document.querySelector("form");
+const form = document.querySelector("#edit-profile-form");
 const inputBoxes = document.querySelectorAll(".input-box input");
 const errorTxt = document.querySelectorAll(".input-box p");
-const submitBtn = document.querySelector("input[type='submit']");
+const submitBtn = document.querySelector("#saveChanges");
 
 document.getElementById('edit-profile-form').addEventListener('submit', function(event, error) {
   // Perform form validation
@@ -45,22 +45,18 @@ form.onsubmit = (e) => {
 }
 submitBtn.onclick = () => {
   const xhr = new XMLHttpRequest();
-  xhr.open("POST", "./php/edit_profile", true);
+  xhr.open("POST", "./php/edit_profile.php", true);
   xhr.onload = () => {
     if (xhr.readyState === XMLHttpRequest.DONE) {
       if (xhr.status === 200) {
         const data = xhr.response;
         console.log(data);
         if (data === "success") {
-          alert("You have successfully editted your profile");
-          window.location.assign("./profile");
-        } else {
-          alert("Failed to edit your profile");
-          window.location.assign("./profile");
+          window.location.assign('profile')
+        }
         }
       }
     }
+    const formData = new FormData(form);
+    xhr.send(formData);
   }
-  const formData = new FormData(form);
-  xhr.send(formData);
-}

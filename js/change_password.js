@@ -62,20 +62,25 @@ form.onsubmit = (e) => {
 };
 submitBtn.onclick = () => {
   const xhr = new XMLHttpRequest();
-  xhr.open("POST", "../php/change_password", true);
+  xhr.open("POST", "php/change_password", true);
   xhr.onload = () => {
     if (xhr.readyState === XMLHttpRequest.DONE) {
       if (xhr.status === 200) {
         const data = xhr.response;
         console.log(data);
-        if (data === "Password changed successfully") {
-          alert('Password changed successfully');
-          location.href = "../profile";
+        if (data === "success") {
+          window.location.assign('profile');
         }
 
         if (data === "Old password incorrect") {
           errorTxt[0].style.display = "flex";
           errorTxt[0].innerHTML = '<i class="bi bi-info-circle-fill"></i> Old password incorrect.';
+        } else if (data === "New passwords do not match") {
+          errorTxt[1].style.display = "flex";
+          errorTxt[1].innerHTML = '<i class="bi bi-info-circle-fill"></i> New passwords do not match.';
+          errorTxt[2].style.display = "flex";
+          errorTxt[3].innerHTML = '<i class="bi bi-info-circle-fill"></i> New passwords do not match.';
+          
         }
       };
     }

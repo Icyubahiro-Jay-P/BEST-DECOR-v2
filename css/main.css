@@ -171,7 +171,7 @@ nav li.active .bi {
   font-size: 1.2rem;
 }
 .table-container {
-  width: 85%;
+  width: 83%;
   overflow-x: auto;
   position: relative;
   margin-left: 185px;
@@ -179,6 +179,7 @@ nav li.active .bi {
   padding: 10px;
   border-radius: 5px;
   z-index: 1;
+  overflow-x: auto;
 }
 .table-container::-webkit-scrollbar-button:start,
 .table-container::-webkit-scrollbar-button:end,
@@ -186,8 +187,8 @@ nav li.active .bi {
   display: none;
 }
 table {
-  width: 100%;
-  min-width: 600px;
+  width: max-content;
+  min-width: 100%;
   border-collapse: collapse;
   border-radius: 8px;
 }
@@ -198,17 +199,20 @@ th, td {
   padding: 5px;
   transition: .3s ease-in-out;
 }
+td{
+  padding: 10px;
+}
 tr{
-  background: #eee;
+  background: #ddd;
 }
 tr:nth-child(even){
-  background: #fff;
+  background: #ccc;
 }
 tr:nth-child(even):hover{
-  background: #eee;
+  background: #cacaca;
 }
 tr:hover{
-  background: #ddd;
+  background: #bbb;
 }
 th {
   background: var(--grey-clr);

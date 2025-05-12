@@ -27,16 +27,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $sql2 = "SELECT * FROM users WHERE email = '$email'";
             $query2 = mysqli_query($conn, $sql2);
             if ($row = mysqli_fetch_assoc($query2)) {
-                $_SESSION['user_id'] = $row['id'];
-                $_SESSION['email'] = $row['email'];
-                $_SESSION['role'] = $row['role'];
-                $_SESSION['joined_on'] = $row['joined_on'];
-                $_SESSION['full_name']  = $row['full_name'];
-                $_SESSION['password'] = $row['password'];
+                $_SESSION['added_user_id'] = $row['id'];
+                $_SESSION['added_email'] = $row['email'];
+                $_SESSION['added_role'] = $row['role'];
+                $_SESSION['added_joined_on'] = $row['joined_on'];
+                $_SESSION['added_full_name']  = $row['full_name'];
+                $_SESSION['added_password'] = $row['password'];
                 echo "success";
+                $_SESSION['toast'] = [
+                  'type' => 'success',
+                  'message' => 'Client successfully registered'
+                ];
             }
         } else {
             echo "Something went wrong";
+            $_SESSION['toast'] = [
+              'type' => 'error',
+              'message' => 'Failed to register client'
+            ];
         }
       }else{
         echo "Passwords do not match";

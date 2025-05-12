@@ -19,6 +19,7 @@ $user = mysqli_fetch_assoc($result);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/profile.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/toast.css">
   <link rel="stylesheet" href="icons/bootstrap-icons.css">
   <title>Best Decor: Profile</title>
 </head>
@@ -26,8 +27,12 @@ $user = mysqli_fetch_assoc($result);
   <header>
     <h3>Best Decor</h3>
     <h2>Profile</h2>
-  </header>
-
+    <?php
+      if(isset($_SESSION['toast'])){
+        include('components/toast.php');
+      }
+      ?>
+      </header>
   <nav>
     <ul>
       <li>
@@ -78,10 +83,14 @@ $user = mysqli_fetch_assoc($result);
       <div class="info-group">
         <p><i class="bi bi-person-fill"></i> <?php echo $user['full_name']; ?></p>
         <p><i class="bi bi-envelope-fill"></i> <?php echo $user['email']; ?></p>
-        <p><i class="bi bi-person-badge"></i> <?php echo $user['role']; ?></p>
+        <p style="text-transform:capitalize;"><i class="bi bi-person-badge"></i> <?php echo $user['role']; ?></p>
       </div>
     </div>
     <div class="tools">
+      <!-- <a href="add_user">
+        <i class="bi bi-person-up"></i>
+        Add another user
+      </a> -->
       <a href="edit_profile?user_id=<?php echo $_SESSION["user_id"]?>" id="editProfile">
         <i class="bi bi-pencil-square"></i>
         Edit Profile
@@ -91,12 +100,16 @@ $user = mysqli_fetch_assoc($result);
         Change Password
       </a>
       </a>
-      <a href="#" id="deleteAccount">
-        <i class="bi bi-trash-fill"></i>
-        Delete account
-      </a>
+      <form action="#" id="deleteProfile" method="post">
+        <a href="" id="deleteAccount">
+          <input type="hidden" name="user_id" value="<?php echo $_SESSION['user_id']?>">
+          <i class="bi bi-trash-fill"></i>
+          Delete account
+        </a>
+      </form>
     </div>
   </main>
 <script src="js/delete_account.js"></script>
+<script src="js/toast.js"></script>
 </body>
 </html>

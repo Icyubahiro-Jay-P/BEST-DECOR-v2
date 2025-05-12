@@ -27,16 +27,19 @@ if(!isset($client_id)){
 
   $query = mysqli_query($conn, $sql);
   if($query){
-    echo "<script>
-            alert('Client is editted successfully');
-            window.location.assign('../dashboard');
-          </script>";
+    $_SESSION['toast'] = [
+      'type' => 'success',
+      'message' => 'Client updated registered'
+    ];
+    // echo "success";
+    header("Location: ../dashboard");
   }else{
-    echo "<script>
-            alert('Failed to edit the client');
-            // window.location.assign('../dashboard');
-          </script>";
-        }
+    $_SESSION['toast'] = [
+      'type' => 'error',
+      'message' => 'Failed to register client'
+    ];
+    header("Location: ../dashboard");
+  }
       }else{
   echo "<script>
           alert('Failed to edit the client');

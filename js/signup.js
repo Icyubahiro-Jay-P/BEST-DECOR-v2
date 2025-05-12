@@ -76,10 +76,14 @@ submitBtn.onclick = () => {
       if (xhr.status === 200) {
         const data = xhr.response;
         // console.log(data);
-        if (data == "success") {
+        if (data === "success") {
           location.href = "./home";
-        }
+        } 
 
+        if (data === "Something went wrong") {
+          location.assign("./profile");
+        }
+        
         if (data === "Email is already taken") {
           errorTxt[1].style.display = "flex";
           errorTxt[1].innerHTML = '<i class="bi bi-info-circle-fill"></i> Email is already taken.';

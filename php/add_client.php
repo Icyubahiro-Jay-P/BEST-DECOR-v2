@@ -23,15 +23,17 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
   $query = mysqli_query($conn, $sql);
   if($query){
-    echo "<script>
-            alert('Client is successfully registered');
-            window.location.assign('../dashboard');
-          </script>";
+    $_SESSION['toast'] = [
+      'type' => 'success',
+      'message' => 'Client successfully registered'
+    ];
+    header("Location: ../dashboard");
   }else{
-    echo "<script>
-            alert('Failed to register the client');
-            window.location.assign('../dashboard');
-          </script>";
+    $_SESSION['toast'] = [
+      'type' => 'error',
+      'message' => 'Failed to register client'
+    ];
+    header("Location: ../dashboard");
   }
 }
 ?>

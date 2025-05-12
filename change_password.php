@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("../php/connect.php");
+include("php/connect.php");
 $user_id = $_GET['user_id'];
 if(!isset($user_id)){
   echo "<script>
