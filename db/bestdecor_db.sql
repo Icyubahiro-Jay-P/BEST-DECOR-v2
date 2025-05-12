@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 17, 2025 at 05:49 PM
+-- Generation Time: May 12, 2025 at 11:24 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -61,7 +61,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `full_name`, `email`, `password`, `role`, `joined_on`) VALUES
-(1359195485, 'Icyubahiro Jay P', 'admin@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', 'admin', '2025-03-16 17:27:49');
+(47993, 'Nirere Gaudelive', 'bestdecor@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', 'admin', '2025-05-12 09:05:36');
 
 --
 -- Indexes for dumped tables
