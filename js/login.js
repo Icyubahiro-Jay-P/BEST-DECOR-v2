@@ -59,8 +59,8 @@ submitBtn.onclick = () => {
       if (xhr.status === 200) {
         const data = xhr.response;
         // console.log(data);
-        if (data == "success") {
-          location.href = "./home";
+        if (data === "success") {
+          location.href = "./";
         }
         if (data === "Email is not found") {
           errorTxt[0].style.display = "flex";

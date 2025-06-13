@@ -77,7 +77,7 @@ submitBtn.onclick = () => {
         const data = xhr.response;
         // console.log(data);
         if (data === "success") {
-          location.href = "./home";
+          location.href = "./";
         } 
 
         if (data === "Something went wrong") {

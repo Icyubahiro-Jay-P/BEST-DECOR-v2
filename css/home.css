@@ -159,7 +159,7 @@ nav li.active .bi {
   font-size: 1.2rem;
 }
 
-.home-container {
+.-container {
   margin-left: 185px;
   margin-top: 100px;
   padding: 20px;
@@ -319,7 +319,7 @@ nav li.active .bi {
 }
 
 @media screen and (max-width: 1024px) {
-  .home-container {
+  .-container {
     margin-left: 65px;
     width: calc(100% - 65px);
   }
@@ -330,7 +330,7 @@ nav li.active .bi {
 }
 
 @media screen and (max-width: 768px) {
-  .home-container {
+  .-container {
     margin-left: 55px;
     width: calc(100% - 55px);
     padding: 15px;
@@ -357,7 +357,7 @@ nav li.active .bi {
     display: block;
   }
 
-  .home-container {
+  .-container {
     margin-left: 50px;
     /* padding-top: 100px; */
   }
@@ -372,7 +372,7 @@ nav li.active .bi {
 }
 
 @media screen and (max-width: 480px) {
-  .home-container {
+  .-container {
     margin-left: 48px;
     width: calc(100% - 48px);
     padding: 10px;

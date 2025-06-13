@@ -1,5 +1,4 @@
 <?php
-session_start();
 include("php/connect.php");
 if(!isset($_SESSION['full_name'])){
   echo "<script>window.location.assign('./login');</script>";
@@ -11,15 +10,15 @@ if(!isset($_SESSION['full_name'])){
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php include("favicon.php");?>
-  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="icons/bootstrap-icons.css">
-  <title>Best Decor: Home</title>
+  <title>Best Decor: </title>
 </head>
 <body data-theme="light">
   <header>
     <h3>Best Decor</h3>
-    <h2>Home</h2>
+    <h2></h2>
     <div class="parts">
       <div class="profile">
         <a href="profile">
@@ -31,8 +30,8 @@ if(!isset($_SESSION['full_name'])){
   <nav>
     <ul>
       <li class="active">
-        <a href="home">
-          <i class="bi bi-house-fill"></i>Home
+        <a href="">
+          <i class="bi bi-house-fill"></i>
         </a>
       </li>
       <li>
@@ -68,7 +67,7 @@ if(!isset($_SESSION['full_name'])){
     </ul>
   </nav>
 
-  <main class="home-container">
+  <main class="-container">
     <!-- Welcome Section -->
     <section class="welcome-section">
       <h1>Welcome, <?php echo $_SESSION['full_name']; ?>!</h1>

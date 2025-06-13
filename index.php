@@ -1,3 +1,8 @@
 <?php
-header("location: ./login");
+session_start();
+if(!isset($_SESSION['user_id'])) {
+  include('login.php');
+}else{
+  include('.php');
+}
 ?>

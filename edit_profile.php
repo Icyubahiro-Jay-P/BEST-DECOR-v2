@@ -30,8 +30,8 @@ $row = mysqli_fetch_assoc($query);
   <nav>
     <ul>
       <li>
-        <a href="home">
-          <i class="bi bi-house-fill"></i>Home
+        <a href="">
+          <i class="bi bi-house-fill"></i>
         </a>
       </li>
       <li>
