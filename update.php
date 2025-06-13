@@ -25,6 +25,7 @@ if(!isset($client_id)){
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Best Decor: Update Client</title>
+  <?php include("favicon.php");?>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/add_client.css">
   <link rel="stylesheet" href="icons/bootstrap-icons.css">

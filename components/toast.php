@@ -9,6 +9,5 @@ if(isset($_SESSION['toast'])) {
     echo "</div>";
     echo "</div>";
     echo "<script src='./js/toast.js'></script>";
-    // include("js");
 }
 ?>

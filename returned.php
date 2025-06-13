@@ -12,6 +12,7 @@ if(!isset($_SESSION['user_id'])){
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <?php include("favicon.php");?>
   <link rel="stylesheet" href="icons/bootstrap-icons.css">
   <link rel="stylesheet" href="css/main.css">
   <title>Best Decor: Returned</title>

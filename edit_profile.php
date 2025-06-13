@@ -16,6 +16,7 @@ $row = mysqli_fetch_assoc($query);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Best Decor: Edit profile</title>
+  <?php include("favicon.php");?>
   <link rel="stylesheet" href="css/profile.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/edit_profile.css">

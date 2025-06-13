@@ -99,6 +99,9 @@ form input[type='number']::-webkit-inner-spin-button{
 }
 .select-group{
   display: flex;
+  width: 350px;
+  flex-direction: column;
+  margin-bottom: 10px;
 }
 .select-group select{
   display: flex;
@@ -147,7 +150,7 @@ form input[type='number']::-webkit-inner-spin-button{
     margin-right: 0;
   }
   .select-group {
-    flex-direction: column;
+    margin-right: 10px;
   }
   .select-group select {
     width: 100%;
@@ -166,7 +169,7 @@ form input[type='number']::-webkit-inner-spin-button{
     padding-bottom: 70px;
   }
   .select-group {
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
   }
   .select-group select {

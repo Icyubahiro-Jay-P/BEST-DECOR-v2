@@ -12,6 +12,7 @@ if(!isset($_SESSION['user_id'])){
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <?php include("favicon.php");?>
   <link rel="stylesheet" href="icons/bootstrap-icons.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/toast.css">
@@ -91,7 +92,7 @@ if(!isset($_SESSION['user_id'])){
       <th>Date of Take</th>
       <th>Returned</th>
       <th>Date of Return</th>
-      <th>Done by</th>
+      <th>Done on</th>
       <th>Edit</th>
       <th>Delete</th>
     </thead>
@@ -115,7 +116,7 @@ if(!isset($_SESSION['user_id'])){
               <td><?php echo $row["date_taken"] == "0000-00-00 00:00:00" ? "*****" : $row['date_taken'] ?></td>
               <td><?php echo $row['returned']?></td>
               <td><?php echo $row["date_returned"] == "0000-00-00 00:00:00" ? "*****" : $row['date_returned']?></td>
-              <td><?php echo $_SESSION['full_name']; ?></td>
+              <td><?php echo $row['done_on']; ?></td>
               <td><a style="background:var(--success-clr);padding:5px 10px;border-radius:5px; color:white;text-decoration:none;" href="update?client_id=<?php echo $row['id']?>"><i class="bi bi-pencil-fill"></i></a></td>
               <td><a style="background:var(--error-clr);padding:5px 10px;border-radius:5px; color:white;text-decoration:none;" href="./php/delete_client?client_id=<?php echo $row['id']?>"><i class="bi bi-trash-fill"></i></a></td>
             </tr>

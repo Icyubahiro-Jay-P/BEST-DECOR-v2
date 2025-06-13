@@ -18,6 +18,7 @@ $user = mysqli_fetch_assoc($result);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/profile.css">
+  <?php include("favicon.php");?>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/toast.css">
   <link rel="stylesheet" href="icons/bootstrap-icons.css">
@@ -76,10 +77,9 @@ $user = mysqli_fetch_assoc($result);
   <main>
     <div class="image-container">
       <img src="<?php echo $user['profile_image'] ?? 'profile.png'; ?>" alt="Profile">
-      <i class="bi bi-x-lg"></i>
     </div>
     <div class="profile-details">
-      <h2>Profile Information</h2>
+      <h3>Profile Information</h2>
       <div class="info-group">
         <p><i class="bi bi-person-fill"></i> <?php echo $user['full_name']; ?></p>
         <p><i class="bi bi-envelope-fill"></i> <?php echo $user['email']; ?></p>

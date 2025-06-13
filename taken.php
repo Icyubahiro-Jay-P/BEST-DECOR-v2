@@ -13,6 +13,7 @@ if(!isset($_SESSION['user_id'])){
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="icons/bootstrap-icons.css">
+  <?php include("favicon.php");?>
   <link rel="stylesheet" href="css/main.css">
   <title>Best Decor: Taken</title>
 </head>

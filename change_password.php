@@ -14,6 +14,7 @@ if(!isset($user_id)){
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Best Decor: Change password</title>
+  <?php include("favicon.php");?>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/profile.css">
   <link rel="stylesheet" href="css/edit_profile.css">

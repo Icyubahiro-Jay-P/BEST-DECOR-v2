@@ -94,7 +94,7 @@ if(!isset($_SESSION['user_id'])){
       </div>
     </div>
     <div class="details">
-      <div class="input-box">
+      <div class="input-box" style="width: 450px;">
         <label style="color:#666;margin-top:-20px;position:absolute;">Date of Return</label>
         <input type="datetime-local" name="date_return">
       </div>
@@ -104,6 +104,7 @@ if(!isset($_SESSION['user_id'])){
           <option value="No">No</option>
           <option value="Yes">Yes</option>
         </select>
+      </div>
       <div class="select-group">
         <label style="color:#666;margin-top:-20px;position:absolute;">Taken:</label>
         <select name="taken">

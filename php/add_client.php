@@ -18,8 +18,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
   $taken = mysqli_real_escape_string($conn, $_POST['taken']);
   $client_id = rand();
 
-  $sql = "INSERT INTO `clients`(`id`, `full_name`, `items`, `date_taken`, `taken`, `returned`, `cash_paid`, `phone_number`, `date_returned`, `balance`, `done_by`)
-          VALUES ('$client_id', '$full_name', '$items', '$date_taken', '$taken', '$returned', '$cash_paid', '$phone_number', '$date_return', '$balance', '{$_SESSION['full_name']}')";
+  $sql = "INSERT INTO `clients`(`id`, `full_name`, `items`, `date_taken`, `taken`, `returned`, `cash_paid`, `phone_number`, `date_returned`, `balance`, `done_by`, `done_on`)
+          VALUES ('$client_id', '$full_name', '$items', '$date_taken', '$taken', '$returned', '$cash_paid', '$phone_number', '$date_return', '$balance', '{$_SESSION['full_name']}', NOW())";
 
   $query = mysqli_query($conn, $sql);
   if($query){
@@ -27,6 +27,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
       'type' => 'success',
       'message' => 'Client successfully registered'
     ];
+    // echo "success";
     header("Location: ../dashboard");
   }else{
     $_SESSION['toast'] = [
