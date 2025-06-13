@@ -61,7 +61,7 @@ if(!isset($_SESSION['full_name'])){
           Profile</a>
       </li>
       <li>
-        <a href="php/logout">
+        <a href="logout">
           <i class="bi bi-box-arrow-left"></i>
           Log&nbsp;out</a>
       </li>

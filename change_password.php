@@ -59,7 +59,7 @@ if(!isset($user_id)){
           Profile</a>
       </li>
       <li>
-        <a href="php/logout">
+        <a href="logout">
           <i class="bi bi-box-arrow-left"></i>
           Log&nbsp;out</a>
       </li>
