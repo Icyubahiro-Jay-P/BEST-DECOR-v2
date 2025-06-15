@@ -19,7 +19,7 @@ if(!isset($_SESSION['full_name'])){
 <body data-theme="light">
   <header>
     <h3>Best Decor</h3>
-    <h2></h2>
+    <h2>Home</h2>
     <div class="parts">
       <div class="profile">
         <a href="profile">
