@@ -60,7 +60,7 @@ submitBtn.onclick = () => {
         const data = xhr.response;
         // console.log(data);
         if (data === "success") {
-          location.href = "./";
+          location.href = "./home";
         }
         if (data === "Email is not found") {
           errorTxt[0].style.display = "flex";

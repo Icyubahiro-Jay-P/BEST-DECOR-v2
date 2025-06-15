@@ -1,5 +1,6 @@
 <?php
 include("php/connect.php");
+session_start();
 if(!isset($_SESSION['full_name'])){
   echo "<script>window.location.assign('./login');</script>";
 }
@@ -10,7 +11,7 @@ if(!isset($_SESSION['full_name'])){
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php include("favicon.php");?>
-  <link rel="stylesheet" href="css/.css">
+  <link rel="stylesheet" href="css/home.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="icons/bootstrap-icons.css">
   <title>Best Decor: </title>
@@ -32,6 +33,7 @@ if(!isset($_SESSION['full_name'])){
       <li class="active">
         <a href="">
           <i class="bi bi-house-fill"></i>
+          Home
         </a>
       </li>
       <li>

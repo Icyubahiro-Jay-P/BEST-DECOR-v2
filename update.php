@@ -45,8 +45,9 @@ if(!isset($client_id)){
   <nav>
     <ul>
       <li>
-        <a href="#">
+        <a href="home">
           <i class="bi bi-house-fill"></i>
+          Home
         </a>
       </li>
       <li>

@@ -37,8 +37,9 @@ $user = mysqli_fetch_assoc($result);
   <nav>
     <ul>
       <li>
-        <a href="">
+        <a href="home">
           <i class="bi bi-house-fill"></i>
+          Home
         </a>
       </li>
       <li>
